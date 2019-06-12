@@ -1,0 +1,30 @@
+fr:
+  refinery:
+    plugins:
+      bands:
+        title: Bands
+    bands:
+      admin:
+        bands:
+          actions:
+            create_new: Créer un(e) nouve(au/l/lle) Band
+            reorder: Réordonner les Bands
+            reorder_done: Fin de réordonnancement des Bands
+          records:
+            title: Bands
+            sorry_no_results: "Désolé ! Aucun résultat."
+            no_items_yet: 'Il n''y a actuellement aucun(e) Band. Cliquer sur "Créer un(e) nouve(au/l/lle) Band" pour créer votre premi(er/ère) band.'
+          band:
+            view_live_html: Voir ce(t/tte) band <br/><em>(Ouvre une nouvelle fenêtre)</em>
+            edit: Modifier ce(t/tte) band
+            delete: Supprimer définitivement ce(t/tte) band
+      bands:
+        show:
+          other: Autres Bands
+  activerecord:
+    attributes:
+      'refinery/bands/band':
+        name: Name
+        style: Style
+        base_fee: Base Fee
+        band_image: Band Image

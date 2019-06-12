@@ -1,0 +1,40 @@
+<%= form_for [refinery, :bands_admin, @band] do |f| -%>
+  <%= render '/refinery/admin/error_messages',
+              :object => @band,
+              :include_object_name => true %>
+
+  <div class='field'>
+    <%= render '/refinery/admin/wysiwyg',
+                :f => f,
+                :fields => [:name, :style],
+                :object => "bands/band" -%>
+  </div>
+
+  <div class='field'>
+    <%= f.label :base_fee -%>
+    <%= f.number_field :base_fee -%>
+  </div>
+
+  <div class='field'>
+    <%= f.label :band_image -%>
+    <%= render '/refinery/admin/image_picker',
+               :f => f,
+               :field => :band_image_id,
+               :image => @band.band_image,
+               :toggle_image_display => false -%>
+  </div>
+
+  <%= render '/refinery/admin/form_actions', f: f,
+             continue_editing: false,
+             delete_title: t('delete', scope: 'refinery.bands.admin.bands.band'),
+             delete_confirmation: t('message', scope: 'refinery.admin.delete'),
+             cancel_url: refinery.bands_admin_bands_path -%>
+<% end -%>
+
+<% content_for :javascripts do -%>
+  <script>
+    $(document).ready(function(){
+      page_options.init(false, '', '');
+    });
+  </script>
+<% end -%>

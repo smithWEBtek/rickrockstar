@@ -1,0 +1,31 @@
+es:
+  refinery:
+    plugins:
+      bands:
+        title: Bands
+#        article: masculino/femenino
+    bands:
+      admin:
+        bands:
+          actions:
+            create_new: Crear nuevo band
+            reorder: Reordenar bands
+            reorder_done: Reordenación de bands completada
+          records:
+            title: Bands
+            sorry_no_results: Lo siento, no hay resultados
+            no_items_yet: No hay bands todavía. Pulsa en "Crear nuevo Band" para crear tu primer band.
+          band:
+            view_live_html: Ver este band como abierto al público <br/><em>(abre en ventana nueva)</em>
+            edit: Editar este band
+            delete: Borrar este band para siempre
+      bands:
+        show:
+          other: Otros bands
+  activerecord:
+    attributes:
+      'refinery/bands/band':
+        name: Name
+        style: Style
+        base_fee: Base Fee
+        band_image: Band Image

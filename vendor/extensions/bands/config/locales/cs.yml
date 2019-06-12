@@ -1,0 +1,30 @@
+cs:
+  refinery:
+    plugins:
+      bands:
+        title: Bands
+    bands:
+      admin:
+        bands:
+          actions:
+            create_new: Přidat Band
+            reorder: Řadit Bands
+            reorder_done: Konec řazení Bands
+          records:
+            title: Bands
+            sorry_no_results: Litujeme, ale nebyly nalezny žádné výsledky.
+            no_items_yet: Zatím nebyly vytvořeny žádné Bands. Zvolte "Přidat Band" pro přidání prvního band.
+          band:
+            view_live_html: Zobrazit náhled band<br/><em>(otevře se v novém okně)</em>
+            edit: Upravit band
+            delete: Smazat band
+      bands:
+        show:
+          other: Další Bands
+  activerecord:
+    attributes:
+      'refinery/bands/band':
+        name: Name
+        style: Style
+        base_fee: Base Fee
+        band_image: Band Image
