@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20190612154727) do
+ActiveRecord::Schema.define(version: 20190612171055) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -55,10 +55,9 @@ ActiveRecord::Schema.define(version: 20190612154727) do
   end
 
   create_table "refinery_bands", force: :cascade do |t|
-    t.text "name"
-    t.text "style"
-    t.integer "base_fee"
-    t.integer "band_image_id"
+    t.string "name"
+    t.integer "photo_id"
+    t.text "bio"
     t.integer "position"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false

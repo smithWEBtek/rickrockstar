@@ -1,0 +1,29 @@
+ru:
+  refinery:
+    plugins:
+      bands:
+        title: Bands
+    bands:
+      admin:
+        bands:
+          actions:
+            create_new: Добавить Band
+            reorder: Изменить порядок Bands
+            reorder_done: Закончить изменять порядок Bands
+          records:
+            title: Bands
+            sorry_no_results: "Извините, поиск не дал результатов."
+            no_items_yet: Записей "Bands" не найдено. Нажмите "Добавить Band" чтобы создать band.
+          band:
+            view_live_html: Просмотреть band вживую <br/><em>(в новом окне)</em>
+            edit: Редактировать band
+            delete: Удалить band навсегда
+      bands:
+        show:
+          other: Другие Bands
+  activerecord:
+    attributes:
+      'refinery/bands/band':
+        name: Name
+        photo: Photo
+        bio: Bio

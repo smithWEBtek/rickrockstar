@@ -1,0 +1,29 @@
+en:
+  refinery:
+    plugins:
+      bands:
+        title: Bands
+    bands:
+      admin:
+        bands:
+          actions:
+            create_new: Add New Band
+            reorder: Reorder Bands
+            reorder_done: Done Reordering Bands
+          records:
+            title: Bands
+            sorry_no_results: Sorry! There are no results found.
+            no_items_yet: There are no Bands yet. Click "Add New Band" to add your first band.
+          band:
+            view_live_html: View this band live <br/><em>(opens in a new window)</em>
+            edit: Edit this band
+            delete: Remove this band forever
+      bands:
+        show:
+          other: Other Bands
+  activerecord:
+    attributes:
+      'refinery/bands/band':
+        name: Name
+        photo: Photo
+        bio: Bio

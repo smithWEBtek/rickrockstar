@@ -1,0 +1,30 @@
+<%= form_for [refinery, :bands_admin, @band] do |f| -%>
+  <%= render '/refinery/admin/error_messages',
+              :object => @band,
+              :include_object_name => true %>
+
+  <div class='field'>
+    <%= f.label :name -%>
+    <%= f.text_field :name, :class => 'larger widest' -%>
+  </div>
+
+  <div class='field'>
+    <%= f.label :photo -%>
+    <%= render '/refinery/admin/image_picker',
+               :f => f,
+               :field => :photo_id,
+               :image => @band.photo,
+               :toggle_image_display => false -%>
+  </div>
+
+  <div class='field'>
+    <%= f.label :bio -%>
+    <%= f.text_field :bio -%>
+  </div>
+
+  <%= render '/refinery/admin/form_actions', f: f,
+             continue_editing: false,
+             delete_title: t('delete', scope: 'refinery.bands.admin.bands.band'),
+             delete_confirmation: t('message', scope: 'refinery.admin.delete', title: @band.name),
+             cancel_url: refinery.bands_admin_bands_path -%>
+<% end -%>
