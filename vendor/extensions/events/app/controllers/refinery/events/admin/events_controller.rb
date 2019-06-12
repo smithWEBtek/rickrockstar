@@ -9,7 +9,7 @@ module Refinery
 
         # Only allow a trusted parameter "white list" through.
         def event_params
-          params.require(:event).permit(:title, :data, :photo_id, :blurb)
+          params.require(:event).permit(:title, :data, :photo_id, :blurb, :refinery_tags)
         end
 
         protected

@@ -3,6 +3,7 @@
     <% @bands.each do |band| %>
       <li>
         <%= link_to band.name, refinery.bands_band_path(band) %>
+        <p>Tags: <% band.tag_list.map(&:name).map {|t| link_to t, tag_path(t) }.join(', ') %></p>
       </li>
     <% end %>
   </ul>

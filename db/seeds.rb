@@ -14,3 +14,9 @@ Refinery::Events::Engine.load_seed
 
 # Added by Refinery CMS Bands extension
 Refinery::Bands::Engine.load_seed
+
+# Added by Refinery CMS Tags extension
+Refinery::Tags::Engine.load_seed
+
+# Added by Refinery CMS Taggings extension
+Refinery::Taggings::Engine.load_seed
